@@ -31,7 +31,8 @@ namespace ReceiptifyServer.Controllers
         public IActionResult Get()
         {
             IEnumerable<Companies> companies = _companies.GetAll();
-            return Ok(companies);
+            JsonResult a = new JsonResult(companies);
+            return Ok(a);
         }
     }
 }
